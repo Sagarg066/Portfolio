@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+   
+}
+
+.main_container{
+    background-image: url('img1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 102vh;
+    width: auto;
+    background-repeat: no-repeat;
+}
+
+.menubar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    width: 100%; /* Full width */
+    top: 0px; /* Stick to the top */
+    bottom: 500px;
+    z-index: 1000; /* Set a high z-index to ensure it's above other elements */
+
+}
+
+.menubar ul {
+    list-style-type: none;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0;
+    text-align: center; /* Align menu items to the right */
+}
+
+.menubar li {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-right: 40px;
+    transition: ease-in-out 0.3s; /* Add smooth transition for all properties */
+}
+
+.menubar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menubar li:hover {
+    background-color: #e60000; /* Change background color on hover */
+    
+}
+
+@media screen and (max-width: 600px) {
+    .menubar li {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .dropdown {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+.typing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+    padding: 1px;
+}
+
+#typing-text {
+    font-size: 2rem;
+    white-space: nowrap;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+#typing-text::after {
+    content: '|';
+    position: absolute;
+    opacity: 0; /* Initially invisible */
+    animation: blink 1s infinite;
+    animation-delay: 2s; /* Delay the cursor animation until typing is complete */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    margin-top: 10px;
+    width: 220px;
+    margin-left: -31px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  
+}
+
+.menubar img {
+    width: 40px; /* Adjust the width of the phone icon */
+    height: 40px;
+    vertical-align: middle;
+}
+
+#skiltext{
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    text-decoration: underline;
+    height: 2px;
+    margin-top: 10px;
+
+}
+
+.skills-section {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bolder;
+    background-color: #cbc7e0;
+    z-index: 4; /* Make sure the skill section appears above the background */
+}
+
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    justify-content: space-around;
+    margin-top: -5px;
+    
+  }
+  
+  .skill {
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(70px);
+    transition: opacity 2s, transform 0.5s;
+    margin: 70px;
+    cursor: pointer; /* Add cursor style for hover effect */
+  }
+  
+  
+  /* Hover Effect */
+  .skill:hover {
+    animation: bounce 0.5s ease; 
+    box-shadow: 0 0 10px rgba(0, 0.9, 0.5, 1.2); 
+  }
+  
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+.about-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fafafa; /* Add a background color for visual separation */
+    
+}
+
+.about-section h2 {
+    color: #333; /* Adjust text color for better contrast */
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h3{
+    margin: 30px;
+   line-height: 2;
+    overflow-wrap: break-word;
+}
+
+h1{
+    padding: 0px;
+    margin: 0px; 
+    color:white;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#captcha {
+    flex-grow: 2;
+}
+
+img {
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+h1{
+    color: #000;
+    margin-top: -10px;
+   font-size: 20px;
+}

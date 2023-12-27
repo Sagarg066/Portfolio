@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-WuH11IaxTCeYSJ9PCGZZ4/42A25ZKz6Q2I5iw5gpdJWypXk0ScGSaV/dC4jkAeDKN+5Udr+ryaDaiLXieOQeRQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <title>portfolio</title>
+</head>
+<body>
+
+<div class="main_container">
+
+  <div class="menubar">
+      <ul>
+       
+          <a href="https://www.linkedin.com/in/thesagargupta/" target="_blank"> <li>LinkdIn</li></a>
+          <a href="https://github.com/Sagarg066/calcuator" target="_blank"><li>GitHub</li></a>
+          <a href="mailto:mailid.sagargupta@gmail.com"><li>Contact Me</li></a>
+
+          <li class="dropdown">
+             <a href="#">Download Resume</a>
+             <div class="dropdown-content">
+                 <a href="Resume_Sagar_Gupta.pdf" target="_blank">Web Developer</a>
+                 <a href="Resume_SG_071123.pdf" target="_blank">Survey Programmer</a>
+             </div>
+         </li>
+      
+         <a href="tel:8090857784"><li><img src="phone-icon.png" alt="Phone"></li></a>
+
+      </ul>
+   </div>
+
+<div class="typing-container">
+    <h1 id="typing-text">Hello Visitor! I'm Sagar, Web Developer/Survey Programmer...</h1>
+</div>
+
+<section id="skills" class="skills-section">
+  
+    <div class="skills-container">
+      <!-- <h3 id="skiltext">Skills</h3> -->
+      <div class="skill">
+       
+        <p>HTML</p>
+      </div>
+      <div class="skill">
+        <p>CSS</p>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+      </div>
+      <div class="skill">
+        <p>NodeJS</p>
+      </div>
+      <div class="skill">
+        <p>React</p>
+      </div>
+      <div class="skill">
+        <p>Python</p>
+      </div>
+
+      <div class="skill">
+        <p>Decipher</p>
+      </div>
+
+      <div class="skill">
+        <p>SQL</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2 id="about_me">About Me</h2><br/>
+    <p>
+
+      <h2>CODING IS FUN!</h2><br/>
+
+     <h3> It's been more than 2 years while working in feild of Market Research as a Survey Programmer. In last 2 years i've learnt lot of things in feild of survey programming and currently working on level 3 jobs.<br/><br/><br/>
+
+      I'm always open to new opportunities, collaborations, or just a friendly chat. If you're working on something exciting or looking to hire for Web developer or Survey programmer, feel free to email me by clicking this link: <a href="mailto:mailid.sagargupta@gmail.com">Click here to mail</a>
+      <br><br>
+      Thank you for stopping by and learning a bit about me!
+      <br/><br/>
+      </h3>
+      <h2>Sagar Gupta</h2>
+    </p>
+</section>
+
+
+
+    <form id="contactForm" onsubmit="return validateCaptcha(event)">
+      <h1 id="contact_text">Contact Me</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <div class="captcha-container">
+          <label for="captcha">Captcha:</label>
+          <div id="captcha"></div>
+      </div>
+
+      <label for="captchaInput">Enter the text above:</label>
+      <input type="text" id="captchaInput" name="captchaInput" required>
+
+      <button type="submit" onclick="validateCaptcha()">Submit</button>
+
+
+  
+  <script src="index.js"></script>
+</div>
+</body>
+</html>
