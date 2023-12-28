@@ -1,91 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var typingElement = document.getElementById('typing-text');
-    var textToType = typingElement.textContent;
-
-    typingElement.textContent = ''; // Clear the text content
-
-    // Split the text into an array of characters
-    var characters = textToType.split('');
-
-    // Use a loop to append each character with a delay
-    characters.forEach(function (char, index) {
-        setTimeout(function () {
-            typingElement.textContent += char;
-        }, index * 100);
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    var skillsSection = document.getElementById("skills-section");
-    var skills = document.querySelectorAll(".skill");
-
-    function isInViewport(element) {
-        var rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function animateSkills() {
-        skills.forEach(function (skill) {
-            if (isInViewport(skill)) {
-                skill.style.opacity = 1;
-                skill.style.transform = "translateY(0)";
-            }
-        });
-
-        if (isInViewport(skillsSection)) {
-            skillsSection.style.opacity = 1;
-            skillsSection.style.transform = "translateY(0)";
-        }
-    }
-
-    window.addEventListener("scroll", animateSkills);
-    window.addEventListener("resize", animateSkills);
-
-    // Initial check in case some skills are already in the viewport
-    animateSkills();
-});
-
-
-
-
-
-    function generateCaptcha() {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let captcha = '';
-        for (let i = 0; i < 6; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            captcha += characters[randomIndex];
-        }
-        document.getElementById('captcha').innerText = captcha;
-    }
-
-    function validateCaptcha(event) {
-        event.preventDefault(); // Prevent the form from submitting by default
-
-        const userEnteredCaptcha = document.getElementById('captchaInput').value;
-        const actualCaptcha = document.getElementById('captcha').innerText;
-
-        if (userEnteredCaptcha.toLowerCase() === actualCaptcha.toLowerCase()) {
-            alert('Captcha validation successful. Form can be submitted.');
-            // Additional logic for form submission
+    const typingText = document.getElementById('typing-text');
+  
+    function type(texts, index) {
+      let currentText = texts[index];
+  
+      function typeCharacter() {
+        typingText.textContent += currentText.charAt(0);
+        currentText = currentText.substring(1);
+  
+        if (currentText.length > 0) {
+          setTimeout(typeCharacter, 100); // Adjust the typing speed if needed
         } else {
-            alert('Captcha validation failed. Please try again.');
-            // Additional logic for handling failed validation
+          // Animation for this text is complete, clear the text content
+          setTimeout(function () {
+            typingText.textContent = '';
+            // Call the type function for the next text in the array
+            type(texts, (index + 1) % texts.length);
+          }, 2000); // Adjust the delay before switching to the next text
         }
-
-        // Optional: Regenerate captcha after submission
-        generateCaptcha();
+      }
+  
+      typeCharacter();
     }
-
-    // Initial captcha generation
-    generateCaptcha();
-
-
-
+  
+    // Save scroll position before unloading the page
+    window.addEventListener('beforeunload', function () {
+      sessionStorage.setItem('scrollPosition', window.scrollY || document.documentElement.scrollTop);
+    });
+  
+    // Restore scroll position on page load
+    const scrollPosition = sessionStorage.getItem('scrollPosition') || 0;
+    window.scrollTo(0, scrollPosition);
+  
+    // Call the type function with an array of texts
+    type(["Web Developer", "Survey Programmer"], 0);
+  });
   
