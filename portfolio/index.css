@@ -259,7 +259,7 @@ h2{
   
   .social-icons a:hover {
     cursor: pointer;
-                        }
+    }
 
   .footer-line {
     width: 70%;
@@ -270,16 +270,6 @@ h2{
   .developed-by {
     text-align: center;
     color: #fff;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 40px; /* Adjust spacing between text and line */
   }
-
- 
-  
-  
-  
-  
-
-
-
-
