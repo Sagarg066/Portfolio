@@ -8,12 +8,11 @@ body {
 
 .main_container {
     position: absolute;
-
     background-image: url('img3.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-repeat: no-repeat;
     backface-visibility: hidden; /* Prevent background jittering */
     will-change: transform; /* Optimize for smoother animations */
@@ -27,20 +26,19 @@ body {
   .loaded .main_container {
     opacity: 1; /* Show the element when loaded */
   }
-  
+
   .menubar {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     height: 100px;
     position: sticky;
-    width: 100%; /* Full width */
+    width: 100vw; /* Full width */
     top: 0px; /* Stick to the top */
     bottom: 500px;
     z-index: 1000; /* Set a high z-index to ensure it's above other elements */
 
 }
-
 .menubar ul {
     list-style-type: none;
     margin: 0;
@@ -67,6 +65,7 @@ body {
     background-color: #e60000; /* Change background color on hover */
     
 }
+
 
 .dropdown {
     position: relative;
@@ -196,25 +195,25 @@ h2{
     margin-right: auto;
   }
   
-
   .skills {
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     height: 150px;
+    width: auto;
     padding: 20px;
     margin-left: 40px;
     justify-content: center;
     border-radius: 5px;
     margin: 30 auto; /* Center the skills section */
-    width:90%; /* Adjust the width as needed */
   }
   
   .skill {
     
     align-items: center;
     justify-content: center;
+    width: 100%;
     text-align: center; /* Center the content horizontally */
     border-radius: 5px;
     padding: 40px;
@@ -230,6 +229,7 @@ h2{
     font-size: 15px; /* Adjusted font size */
   }
   
+
 
   .footer{
     background-color: #000;
@@ -259,7 +259,7 @@ h2{
   
   .social-icons a:hover {
     cursor: pointer;
-    }
+                        }
 
   .footer-line {
     width: 70%;
@@ -270,6 +270,136 @@ h2{
   .developed-by {
     text-align: center;
     color: #fff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 40px; /* Adjust spacing between text and line */
   }
+
+
+@media only screen and (max-width: 768px) {
+  
+  .main_container {
+    max-width: 100%;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    margin-top: 12px;
+    width: 335px;
+    border-radius: 15px;
+    margin-left: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+   
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+    
+  
+}
+
+.dropdown-divider {
+  border-top: 0.1px solid #fff; /* White border for the divider */
+  margin: 8px auto; /* Auto margin for centering horizontally */
+  width: 85%; /* Set the width of the divider */
+}
+
+
+
+
+  .center-text {
+      height: auto;
+      padding: 20px; /* Adjusted padding */
+      text-align: center;
+  }
+
+  #about h2 {
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Keep the text on a single line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #about h3 {
+    padding: 10px; /* Adjusted padding */
+    text-align: center; /* Align text to the left */
+  }
+
+  #abouttext{
+    height: auto;
+    margin-left: -40px;   
+    width: 300px;
+  }
+
+  .skills {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+      height: auto;
+      width: auto;
+      margin-left: -17px;
+  }
+
+  /* Adjusted margins and heights for better spacing */
+  .menubar {
+      height: auto;
+  }
+
+  .menubar li {
+      display: block;
+      margin: 1px 0;
+      padding: 10px;
+  }
+
+  .sec_about {
+    margin-top: 490px; /* Adjusted margin-top */
+  }
+
+  #myname {
+      font-size: 30px;
+      margin-top: 180px; /* Adjusted margin-top */
+  }
+
+
+  #typing-text {
+      margin-top: 300px; /* Adjusted margin-top */
+      font-size: 2.5rem;
+      height: auto;
+      width: auto;
+  }
+
+  .footer {
+      margin-top: 50px; /* Adjusted margin-top */
+      height: auto;
+      padding: 20px 0;
+  }
+
+  .social-icons img {
+      margin-top: 20px;
+  }
+
+  .developed-by {
+      margin-top: 20px;
+  }
+
+}
