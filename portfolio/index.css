@@ -388,7 +388,8 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
       gap: 15px;
       height: auto;
       width: auto;
-      margin-left: -17px;
+      margin-left: 2px;
+
   }
 
   /* Adjusted margins and heights for better spacing */
