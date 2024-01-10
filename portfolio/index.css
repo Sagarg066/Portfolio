@@ -20,15 +20,15 @@ body {
   }
 
   
- #right-img{
+  #right-img{
     background-image: url(1.png);
     height: 450px;
     width: 600px;
-    float: right;
-    margin-left: -150px;
+    /* float: right; */
+    margin-left: 690px;
     position: relative;
-    width: 50%;
-    margin-top: -750px;
+    width: 40%;
+    margin-top: -700px;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -137,7 +137,7 @@ body {
     align-items: left;
     margin: 0px 150px;
     justify-content: center;
-    width: 50%;
+    width: 22%;
     height: 100vh;
   }
   
@@ -192,7 +192,7 @@ h2{
 #about {
     position: relative;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 250px;
     font-family:'Times New Roman', Times, serif;
     line-height: 40px;
     width: 50%; /* Adjust the width as needed */
@@ -305,10 +305,10 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
 #right-img{
   float: left;
-  margin-left: 00px;
+  margin-left: 10px;
   position: relative;
-  width: 50%;
-  height: 300px;
+  width: 60%;
+  height: 200px;
   margin-top: 10px;
   margin-left: 70px;
 
@@ -415,7 +415,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
       font-size: 1.5rem;
       height: auto;
       margin-left: -70px;
-      width: auto;
+      width: 220px;
   }
 
   .footer {
