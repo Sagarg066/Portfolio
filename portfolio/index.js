@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
         currentText = currentText.substring(1);
   
         if (currentText.length > 0) {
-          setTimeout(typeCharacter, 100); // Adjust the typing speed if needed
+          setTimeout(typeCharacter, 125); // Adjust the typing speed if needed
         } else {
           // Animation for this text is complete, clear the text content
           setTimeout(function () {
             typingText.textContent = '';
             // Call the type function for the next text in the array
             type(texts, (index + 1) % texts.length);
-          }, 2000); // Adjust the delay before switching to the next text
+          }, 1000); // Adjust the delay before switching to the next text
         }
       }
   
