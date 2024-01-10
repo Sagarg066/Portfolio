@@ -92,7 +92,8 @@ body {
     position: absolute;
     background-color: #333;
     margin-top: 10px;
-    width: 239px;
+    width: 225px;
+    border-radius: 7px;
     margin-left: -40px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
@@ -101,6 +102,7 @@ body {
     color: #fff;
     padding: 12px 16px;
     text-decoration: none;
+    border-radius: 7px;
     display: block;
     
 }
