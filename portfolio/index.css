@@ -18,6 +18,20 @@ body {
     will-change: transform; /* Optimize for smoother animations */
     transition: opacity 0.5s; /* Add a transition effect for opacity changes */
   }
+
+  
+  #right-img{
+    background-image: url(1.png);
+    height: 500px;
+    width: 650px;
+    float: right;
+    margin-left: 00px;
+    position: relative;
+    width: 50%;
+    margin-top: -700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   
   .loading {
     opacity: 0; /* Initially hide the element */
@@ -31,7 +45,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
-    height: 100px;
+    height: 80px;
     position: sticky;
     width: 100vw; /* Full width */
     top: 0px; /* Stick to the top */
@@ -51,7 +65,7 @@ body {
 .menubar li {
     display: inline-block;
     margin-top: 20px;
-    padding: 20px 40px;
+    padding: 10px 40px;
     margin-right: 40px;
     transition: ease-in-out 0.3s; /* Add smooth transition for all properties */
 }
@@ -63,6 +77,7 @@ body {
 
 .menubar li:hover {
     background-color: #e60000; /* Change background color on hover */
+    border-radius: 5px;
     
 }
 
@@ -98,9 +113,6 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
-
-    
-  
 }
 
 .menubar img {
@@ -111,33 +123,33 @@ body {
 
 #myname{
     position: fixed;
-    font-size: 70px;
-    font-family: 'Consolas';
+    font-size: 50px;
+    font-family: 'salsa';
     text-align: center;
     font-weight: bolder;
-    margin-top: -210px
+    margin-top: -120px
 
 }
+
   .center-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    margin-top: 0px;
+    align-items: left;
+    margin: 0px 150px;
     justify-content: center;
+    width: 50%;
     height: 100vh;
   }
   
   .center-text p {
     font-size: 2rem;
     font-weight: bold;
-    
     color: #000;
     margin: 0; /* Reset margin to remove any default spacing */
   }
   
   #typing-text {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Consolas';
     white-space: nowrap;
     font-weight: bold;
@@ -276,14 +288,30 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
 
 @media only screen and (max-width: 768px) {
+
+  #about_me{
+    margin-top: 40px;
+  }
   
   .main_container {
     max-width: 100%;
+    max-height: 100vh;
   }
 
   .dropdown {
     position: relative;
     display: inline-block;
+}
+
+#right-img{
+  float: left;
+  margin-left: 00px;
+  position: relative;
+  width: 50%;
+  height: 300px;
+  margin-top: 10px;
+  margin-left: 70px;
+
 }
 
 .dropdown-content {
@@ -330,7 +358,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
   .center-text {
       height: auto;
       padding: 20px; /* Adjusted padding */
-      text-align: center;
+      text-align: left;
   }
 
   #about h2 {
@@ -377,14 +405,16 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
   #myname {
       font-size: 30px;
-      margin-top: 180px; /* Adjusted margin-top */
+      margin-top: 100px; /* Adjusted margin-top */
+      margin-left: -70px;
   }
 
 
   #typing-text {
-      margin-top: 300px; /* Adjusted margin-top */
-      font-size: 2.5rem;
+      margin-top: 200px; /* Adjusted margin-top */
+      font-size: 1.5rem;
       height: auto;
+      margin-left: -70px;
       width: auto;
   }
 
