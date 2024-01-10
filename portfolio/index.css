@@ -152,6 +152,7 @@ body {
     font-size: 2rem;
     font-family: 'salsa';
     white-space: nowrap;
+    width: 350px;
     font-weight: bold;
     color: #000;
     overflow: hidden;
