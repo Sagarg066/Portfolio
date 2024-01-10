@@ -35,4 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the type function with an array of texts
     type(["Web Developer...", "Survey Programmer..."], 0);
   });
+
+
+ document.addEventListener("DOMContentLoaded", function() {
+
+    var backgroundContainer = document.getElementById("lazy-background");
+
+    backgroundContainer.style.backgroundImage = 'url("1.png")';
+
   
+});
