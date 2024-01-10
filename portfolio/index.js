@@ -33,6 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollTo(0, scrollPosition);
   
     // Call the type function with an array of texts
-    type(["Web Developer", "Survey Programmer"], 0);
+    type(["Web Developer...", "Survey Programmer..."], 0);
   });
   
