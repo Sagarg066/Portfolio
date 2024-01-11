@@ -24,7 +24,6 @@ body {
     background-image: url(1.png);
     height: 450px;
     width: 600px;
-    /* float: right; */
     margin-left: 690px;
     position: relative;
     width: 40%;
@@ -48,9 +47,9 @@ body {
     height: 80px;
     position: sticky;
     width: 100vw; /* Full width */
-    top: 0px; /* Stick to the top */
-    bottom: 500px;
-    z-index: 1000; /* Set a high z-index to ensure it's above other elements */
+    top: 0px; 
+    /* bottom: 5px;
+    z-index: 100;  */
 
 }
 .menubar ul {
@@ -77,10 +76,9 @@ body {
 
 .menubar li:hover {
     background-color: #e60000; /* Change background color on hover */
-    border-radius: 5px;
+    border-radius: 7px;
     
 }
-
 
 .dropdown {
     position: relative;
@@ -129,7 +127,7 @@ body {
     font-family: 'salsa';
     text-align: center;
     font-weight: bolder;
-    margin-top: -120px
+    margin-top: -150px;
 
 }
 
@@ -137,7 +135,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin: 0px 150px;
+    margin: -10px 150px;
     justify-content: center;
     width: 22%;
     height: 100vh;
@@ -154,9 +152,9 @@ body {
     font-size: 2rem;
     font-family: 'salsa';
     white-space: nowrap;
-    width: 350px;
     font-weight: bold;
     color: #000;
+    width: 350px;
     overflow: hidden;
     position: relative;
   }
@@ -210,7 +208,7 @@ h2{
     margin-right: auto;
   }
   
-.skills {
+  .skills {
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -237,7 +235,7 @@ h2{
     font-weight: bold;
     height: 45px;
     background-color: rgba(153, 153, 153, 0.2);
-    margin: 0px -30px;
+    margin: 0px -0px;
     overflow: hidden;
     word-wrap: break-word;
     white-space: nowrap;
@@ -285,7 +283,7 @@ h2{
   .developed-by {
     text-align: center;
     color: #fff;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 40px; /* Adjust spacing between text and line */
   }
 
@@ -383,7 +381,13 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     width: 300px;
   }
 
-
+  .skills {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+      height: auto;
+      width: auto;
+      margin-left:2px;
+  }
 
   /* Adjusted margins and heights for better spacing */
   .menubar {
