@@ -386,7 +386,9 @@ h2{
       gap: 15px;
       height: auto;
       width: auto;
-      margin-left:50px;
+      border-radius: 5px;
+      justify-content: center;
+/*       margin-left:50px; */
   }
 
   /* Adjusted margins and heights for better spacing */
