@@ -27,7 +27,7 @@ body {
   margin-left: 690px;
   position: relative;
   width: 40%;
-  margin-top: -650px;
+  margin-top: -670px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -93,6 +93,7 @@ body {
   width: 225px;
   border-radius: 7px;
   margin-left: -40px;
+  z-index: 1001;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
