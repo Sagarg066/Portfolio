@@ -383,14 +383,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     width: 300px;
   }
 
-  .skills {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 15px;
-      height: auto;
-      width: auto;
-      margin-left: 2px;
 
-  }
 
   /* Adjusted margins and heights for better spacing */
   .menubar {
