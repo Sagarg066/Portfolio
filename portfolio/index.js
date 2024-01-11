@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
- document.addEventListener("DOMContentLoaded", function() {
+ // document.addEventListener("DOMContentLoaded", function() {
 
-    var backgroundContainer = document.getElementById("lazy-background");
+ //    var backgroundContainer = document.getElementById("lazy-background");
 
-    backgroundContainer.style.backgroundImage = 'url("1.png")';
+ //    backgroundContainer.style.backgroundImage = 'url("1.png")';
 
   
 });
