@@ -297,6 +297,12 @@ h2{
 
 @media only screen and (max-width: 768px) {
 
+
+  *{
+    font-family: "salsa";
+  }
+
+
 #about_me{
   margin-top: 40px;
 }
