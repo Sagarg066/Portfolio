@@ -6,6 +6,11 @@ body {
  
 }
 
+@font-face {
+  font-family: "salsa";
+  src: url(Salsa/Salsa-Regular.ttf);
+}
+
 .main_container {
   position: absolute;
   background-image: url('img3.jpg');
