@@ -302,6 +302,16 @@ h2{
     font-family: "salsa";
   }
 
+#about {
+    position: relative;
+    text-align: center;
+    margin-top: 250px;
+    font-family: 'salsa';
+    line-height: 40px;
+    width: 50%; /* Adjust the width as needed */
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 #about_me{
   margin-top: 40px;
