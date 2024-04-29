@@ -80,7 +80,7 @@ body {
 }
 
 .menubar li:hover {
-  background-color: #FF0000 /* Change background color on hover */
+  background-color: red /* Change background color on hover */
   border-radius: 7px;
   
 }
