@@ -221,7 +221,8 @@ top: 30px;
   text-align: center;
   margin-top: 140px; /* Adjust margin as needed */
   padding: 20px; /* Add padding to prevent collapsing */
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  letter-spacing: 20px;
   
 }
 
@@ -297,13 +298,13 @@ top: 30px;
 
 #about_me{
   margin-top: -80px;
-  letter-spacing: 5px;
-  text-decoration: underline;
+  letter-spacing: 25px;
+  /* text-decoration: underline; */
   overflow: hidden;
 }
 
 h2{
-  letter-spacing: 20px;
+  letter-spacing: 10px;
 
 }
 
