@@ -1,0 +1,579 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  font-family: 'Arial', sans-serif; /* Replace 'Arial' with your preferred font */
+}
+
+.main_container {
+  position: absolute;
+  background-image: url('img3.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  backface-visibility: hidden; 
+  will-change: transform;
+  transition: opacity 0.5s; 
+}
+
+
+#right-img{
+  background-image: url(1.png);
+  height: 450px;
+  width: 600px;
+  margin-left: 690px;
+  position: relative;
+  width: 40%;
+  margin-top: -680px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loading {
+  opacity: 0;
+}
+
+.loaded .main_container {
+  opacity: 1; 
+}
+
+
+.menubar {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  height: 80px;
+  position: relative;
+  width: 100vw;
+  top: 0;
+  bottom: 5px;
+  z-index: 100;
+}
+
+.menubar ul {
+  list-style-type: none;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0;
+  text-align: center;
+}
+
+.menubar li {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 40px;
+  margin-right: 40px;
+  position: relative; /* Ensure the ::after pseudo-element is positioned correctly */
+}
+
+.menubar a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.menubar li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px; /* Adjusted height for the underline */
+  background-color: #fff;
+  transition: width 0.3s ease, height 0.3s ease; /* Added height transition */
+}
+
+.menubar li:hover::after {
+  width: 100%;
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  margin-top: 10px;
+  width: 225px;
+  border-radius: 7px;
+  margin-left: -40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 7px;
+  display: block;
+  
+}
+
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menubar img {
+  width: 35px; 
+  height: 35px;
+  vertical-align: middle;
+}
+
+.experiences {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto; 
+  margin-top: -100px;
+}
+
+#tex {
+color: #333;
+}
+
+.flip-container {
+  position: relative;
+  width: 400px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  perspective: 1000px; /* Enable 3D perspective */
+  margin-top: 200px;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg); /* Flip the div on hover */
+  cursor: pointer;
+}
+
+.flipper {
+  transition: transform 0.6s; /* Smooth transition */
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100%;
+}
+
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Hide the back of the div */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.front {
+  background-color: #f0f0f0; /* Front side background color */
+  z-index: 2; /* Ensure it's above the back side */
+}
+
+.back {
+  background-color: #f0f0f0; /* Back side background color */
+  transform: rotateY(180deg); /* Initially hidden */
+ 
+}
+
+.experiences img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.experiences p {
+  color: black; /* Text color for back side */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#nielsen1{
+position: absolute;
+left: 20%;
+top: 30px;
+}
+
+#line{
+  border-top: 1px solid black;
+  width: 80%;
+}
+
+
+#work-experience {
+  text-align: center;
+  margin-top: 140px; /* Adjust margin as needed */
+  padding: 20px; /* Add padding to prevent collapsing */
+  
+}
+
+#work-experience h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin: 20px 0; /* Space above and below the heading */
+}
+
+#work-experience p {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+#myname{
+  position: fixed;
+  font-size: 50px;
+ 
+  text-align: center;
+  font-weight: bolder;
+  margin-top: -150px;
+
+}
+
+.center-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: -10px 150px;
+  justify-content: center;
+  width: 22%;
+  height: 100vh;
+}
+
+.center-text p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+#typing-text {
+  font-size: 2rem;
+  
+  white-space: nowrap;
+  font-weight: bold;
+  color: #000;
+  width: 350px;
+  overflow: hidden;
+  position: relative;
+  top: -10px;
+}
+
+#typing-text::after {
+  content: '|';
+  position: absolute;
+  opacity: 0; 
+  animation: blink 1s infinite;
+  animation-delay: 2s; 
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+.sec_about{
+  padding: 0px 0px;
+  
+}
+
+#about_me{
+  margin-top: -80px;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  overflow: hidden;
+}
+
+h2{
+  letter-spacing: 20px;
+
+}
+
+#about {
+  position: relative;
+  text-align: center;
+  margin-top: 150px;
+
+  line-height: 40px;
+  width: 50%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about h3 {
+  padding: 30px;
+  max-width: 100%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  height: 150px;
+  width: auto;
+  padding: 20px;
+  margin-left: -2px;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 30 auto; 
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: auto; /* Auto rows */
+  gap: 10px;
+  height: auto;
+  width: 50%; /* Adjust the width as needed */
+  padding: 20px;
+  margin: 30px auto; /* Center the container */
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.skill {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center; 
+  border-radius: 5px;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #000;
+  font-weight: bold;
+  height: 45px;
+  background-color: rgba(153, 153, 153, 0.2);
+  margin: 0px -0px;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.footer{
+  background-color: #000;
+  height: 200px;
+  margin-top: 30px;
+  background-size: cover;
+  opacity: 80%;
+  
+}
+
+.social-icons {
+  margin-top: 20px; /* Adjust spacing as needed */
+  text-align: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px; /* Adjust spacing between icons */
+}
+
+.social-icons img {
+  width: 30px; 
+  height: 30px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.social-icons a:hover {
+  cursor: pointer;
+                      }
+
+.footer-line {
+  width: 70%;
+  margin-top: 30px; /* Adjust spacing between line and social icons */
+  border: 1px groove #989696; /* Customize the line appearance */
+}
+
+.developed-by {
+  text-align: center;
+  color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 40px; /* Adjust spacing between text and line */
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+  *{
+    font-family: "salsa";
+  }
+
+
+  #about {
+    position: relative;
+    text-align: center;
+    margin-top: 250px;
+    line-height: 40px;
+    width: 50%; /* Adjust the width as needed */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+#about_me{
+  margin-top: 40px;
+}
+
+.main_container {
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#right-img{
+float: left;
+margin-left: 10px;
+position: relative;
+width: 60%;
+height: 220px;
+margin-top: 20px;
+margin-left: 70px;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  margin-top: 10px;
+  width: 335px;
+  border-radius: 15px;
+  margin-left: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+ 
+  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+  
+
+}
+
+.dropdown-divider {
+border-top: 0.1px solid #fff; /* White border for the divider */
+margin: 8px auto; /* Auto margin for centering horizontally */
+width: 85%; /* Set the width of the divider */
+}
+
+.center-text {
+    height: auto;
+    padding: 20px; /* Adjusted padding */
+    text-align: left;
+}
+
+#about h2 {
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  white-space: nowrap; /* Keep the text on a single line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#about h3 {
+  padding: 10px; /* Adjusted padding */
+  text-align: center; /* Align text to the left */
+}
+
+#abouttext{
+  height: auto;
+  margin-left: -40px;   
+  width: 300px;
+}
+
+.skills {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    justify-content: center;
+/*       margin-left:50px; */
+}
+
+/* Adjusted margins and heights for better spacing */
+.menubar {
+    height: auto;
+}
+
+.menubar li {
+    display: block;
+    margin: 0px 0;
+    padding: 10px;
+}
+
+.sec_about {
+  margin-top: 490px; /* Adjusted margin-top */
+}
+
+#myname {
+    font-size: 30px;
+    margin-top: 100px; /* Adjusted margin-top */
+    margin-left: -70px;
+}
+
+
+#typing-text {
+    margin-top: 200px; /* Adjusted margin-top */
+    font-size: 1.5rem;
+    height: auto;
+    margin-left: -70px;
+    width: 220px;
+}
+
+.footer {
+    margin-top: 50px; /* Adjusted margin-top */
+    height: auto;
+    padding: 20px 0;
+}
+
+.social-icons img {
+    margin-top: 20px;
+}
+
+.developed-by {
+    margin-top: 20px;
+}
+
+}
