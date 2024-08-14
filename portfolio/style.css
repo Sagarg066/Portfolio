@@ -177,18 +177,20 @@ color: #333;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* padding: 20px; */
+  border-radius: 20px;
   box-sizing: border-box;
 }
 
 .front {
   background-color: #f0f0f0; /* Front side background color */
   z-index: 2; /* Ensure it's above the back side */
+ 
 }
 
 .back {
   background-color: #f0f0f0; /* Back side background color */
   transform: rotateY(180deg); /* Initially hidden */
+  font-size: 11px;
  
 }
 
@@ -221,6 +223,7 @@ top: 30px;
   text-align: center;
   margin-top: 140px; /* Adjust margin as needed */
   padding: 20px; /* Add padding to prevent collapsing */
+  /* text-decoration: underline; */
   letter-spacing: 20px;
   
 }
