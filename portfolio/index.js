@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     typeCharacter();
   }
 
-  type(["Front-end Developer...", "Survey Programmer..."], 1);
+  type(["Front-end Developer", "Survey Programmer"], 1);
 
   window.addEventListener('beforeunload', function () {
     sessionStorage.setItem('scrollPosition', window.scrollY || document.documentElement.scrollTop);
